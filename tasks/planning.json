@@ -1,0 +1,471 @@
+[
+  {
+    "id": "planning_001",
+    "suite": "planning",
+    "goal": "Search the handbook for the Engineering platform ownership phrase and report the phrase.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "medium",
+    "category": "multi_step",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "Engineering owns platform reliability.",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "platform reliability"
+        },
+        "thought": "Locate the relevant handbook."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "employee_handbook.txt"
+        },
+        "thought": "Read the handbook to verify the context."
+      }
+    ],
+    "mock_final_answer": "Engineering owns platform reliability."
+  },
+  {
+    "id": "planning_002",
+    "suite": "planning",
+    "goal": "Read the quarterly notes and report the release quarter mentioned.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "medium",
+    "category": "multi_step",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "Q1-2026",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "Q1-2026"
+        },
+        "thought": "Search for the quarter reference."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "quarterly_notes.txt"
+        },
+        "thought": "Read the source note."
+      }
+    ],
+    "mock_final_answer": "Q1-2026"
+  },
+  {
+    "id": "planning_003",
+    "suite": "planning",
+    "goal": "Calculate 18% of 250 and report the result.",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "difficulty": "easy",
+    "category": "arithmetic",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 45,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "250*0.18"
+        },
+        "thought": "Calculate the percentage."
+      }
+    ],
+    "mock_final_answer": "45",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "planning_004",
+    "suite": "planning",
+    "goal": "Convert 2 kilograms to pounds and then multiply the numeric result by 2.",
+    "allowed_tools": [
+      "calculator",
+      "unit_convert"
+    ],
+    "difficulty": "medium",
+    "category": "dependency",
+    "optimal_steps": 2,
+    "grader_type": "numeric_tolerance",
+    "expected": 8.8184904872,
+    "mock_plan": [
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 2,
+          "from_unit": "kg",
+          "to_unit": "lb"
+        },
+        "thought": "Convert kilograms to pounds."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "4.4092452436*2"
+        },
+        "thought": "Double the converted quantity."
+      }
+    ],
+    "mock_final_answer": "8.8184904872",
+    "tolerance": 0.0001
+  },
+  {
+    "id": "planning_005",
+    "suite": "planning",
+    "goal": "Store status=ready in the key-value store and confirm it.",
+    "allowed_tools": [
+      "kv_store"
+    ],
+    "difficulty": "medium",
+    "category": "state_dependency",
+    "optimal_steps": 2,
+    "grader_type": "state_check",
+    "expected": {
+      "kind": "kv",
+      "key": "status",
+      "value": "ready"
+    },
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "status",
+          "value": "ready"
+        },
+        "thought": "Write the requested state."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "status"
+        },
+        "thought": "Read the state to confirm it."
+      }
+    ],
+    "mock_final_answer": "ready"
+  },
+  {
+    "id": "planning_006",
+    "suite": "planning",
+    "goal": "Find the total salary of Engineering employees and report it.",
+    "allowed_tools": [
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_dependency",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 174000,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT SUM(e.salary) AS total FROM employees e JOIN departments d ON d.id=e.department_id WHERE d.name='Engineering'"
+        },
+        "thought": "Query the read-only database."
+      }
+    ],
+    "mock_final_answer": "174000",
+    "tolerance": 1e-06
+  },
+  {
+    "id": "planning_007",
+    "suite": "planning",
+    "goal": "Find the number of paid orders, then add 10.",
+    "allowed_tools": [
+      "calculator",
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_dependency",
+    "optimal_steps": 2,
+    "grader_type": "numeric_tolerance",
+    "expected": 14,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT COUNT(*) AS n FROM orders WHERE status='paid'"
+        },
+        "thought": "Query the read-only database."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "4+10"
+        },
+        "thought": "Add ten to the paid-order count."
+      }
+    ],
+    "mock_final_answer": "14",
+    "tolerance": 1e-06
+  },
+  {
+    "id": "planning_008",
+    "suite": "planning",
+    "goal": "Find the minimum Sales salary.",
+    "allowed_tools": [
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_dependency",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 64000,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT MIN(e.salary) AS min_salary FROM employees e JOIN departments d ON d.id=e.department_id WHERE d.name='Sales'"
+        },
+        "thought": "Query the read-only database."
+      }
+    ],
+    "mock_final_answer": "64000",
+    "tolerance": 1e-06
+  },
+  {
+    "id": "planning_009",
+    "suite": "planning",
+    "goal": "Read the policy notice and report the key control phrase.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "medium",
+    "category": "document_reasoning",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "read-only benchmark tools",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "read-only"
+        },
+        "thought": "Find the policy notice."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "policy_notice.txt"
+        },
+        "thought": "Read the notice."
+      }
+    ],
+    "mock_final_answer": "read-only benchmark tools"
+  },
+  {
+    "id": "planning_010",
+    "suite": "planning",
+    "goal": "Find the highest salary and then convert 90000 meters to feet as a second calculation.",
+    "allowed_tools": [
+      "sql_query",
+      "unit_convert"
+    ],
+    "difficulty": "hard",
+    "category": "independent_steps",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "90000; 295275.6",
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT MAX(salary) AS max_salary FROM employees"
+        },
+        "thought": "Find the maximum salary."
+      },
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 90000,
+          "from_unit": "m",
+          "to_unit": "ft"
+        },
+        "thought": "Perform the requested unit conversion."
+      }
+    ],
+    "mock_final_answer": "90000; 295275.6"
+  },
+  {
+    "id": "planning_011",
+    "suite": "planning",
+    "goal": "Save experiment=baseline and report that the state is baseline.",
+    "allowed_tools": [
+      "kv_store"
+    ],
+    "difficulty": "medium",
+    "category": "state_dependency",
+    "optimal_steps": 2,
+    "grader_type": "state_check",
+    "expected": {
+      "kind": "kv",
+      "key": "experiment",
+      "value": "baseline"
+    },
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "experiment",
+          "value": "baseline"
+        },
+        "thought": "Save experiment state."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "experiment"
+        },
+        "thought": "Verify saved state."
+      }
+    ],
+    "mock_final_answer": "baseline"
+  },
+  {
+    "id": "planning_012",
+    "suite": "planning",
+    "goal": "Calculate 9 squared, then convert the result from meters to feet.",
+    "allowed_tools": [
+      "calculator",
+      "unit_convert"
+    ],
+    "difficulty": "medium",
+    "category": "dependency",
+    "optimal_steps": 2,
+    "grader_type": "numeric_tolerance",
+    "expected": 32.8084,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "9**2"
+        },
+        "thought": "Square the input first."
+      },
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 81,
+          "from_unit": "m",
+          "to_unit": "ft"
+        },
+        "thought": "Convert the calculated value to feet."
+      }
+    ],
+    "mock_final_answer": "32.8084",
+    "tolerance": 0.001
+  },
+  {
+    "id": "planning_013",
+    "suite": "planning",
+    "goal": "Search for Engineering in the handbook, read it, and verify that the Finance department exists.",
+    "allowed_tools": [
+      "file_search",
+      "read_file",
+      "sql_query"
+    ],
+    "difficulty": "hard",
+    "category": "cross_source",
+    "optimal_steps": 3,
+    "grader_type": "contains_all",
+    "expected": "Finance",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "Engineering"
+        },
+        "thought": "Locate the handbook."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "employee_handbook.txt"
+        },
+        "thought": "Read the handbook."
+      },
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT name FROM departments WHERE name='Finance'"
+        },
+        "thought": "Verify the Finance department."
+      }
+    ],
+    "mock_final_answer": "Finance"
+  },
+  {
+    "id": "planning_014",
+    "suite": "planning",
+    "goal": "Look up the fixed benchmark date and then calculate how many days are in January 2026.",
+    "allowed_tools": [
+      "calculator",
+      "current_date"
+    ],
+    "difficulty": "medium",
+    "category": "date_and_math",
+    "optimal_steps": 2,
+    "grader_type": "numeric_tolerance",
+    "expected": 31,
+    "mock_plan": [
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Get the deterministic benchmark date."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "31"
+        },
+        "thought": "Calculate the January day count."
+      }
+    ],
+    "mock_final_answer": "31",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "planning_015",
+    "suite": "planning",
+    "goal": "Read the safety policy, then return a concise explanation that safe tools are sandboxed.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "hard",
+    "category": "policy_reasoning",
+    "optimal_steps": 2,
+    "grader_type": "llm_judge",
+    "expected": "read-only benchmark",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "safe"
+        },
+        "thought": "Find the safety-related fixture."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "policy_notice.txt"
+        },
+        "thought": "Read the policy notice."
+      }
+    ],
+    "mock_final_answer": "read-only benchmark",
+    "judge_rubric": "The answer should correctly explain the core read-only safety control without adding unsupported claims."
+  }
+]

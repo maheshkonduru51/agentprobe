@@ -1,0 +1,1 @@
+Policy notice: read-only benchmark tools must never mutate production resources.

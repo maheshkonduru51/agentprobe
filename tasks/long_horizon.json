@@ -1,0 +1,902 @@
+[
+  {
+    "id": "long_horizon_001",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_1, compute 1*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_1_4 | 15",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_1",
+          "value": "value_1_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_2",
+          "value": "value_1_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_3",
+          "value": "value_1_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_4",
+          "value": "value_1_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_1_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "1*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_1_4 | 15"
+  },
+  {
+    "id": "long_horizon_002",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_2, compute 2*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_2_4 | 25",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_1",
+          "value": "value_2_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_2",
+          "value": "value_2_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_3",
+          "value": "value_2_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_4",
+          "value": "value_2_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_2_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "2*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_2_4 | 25"
+  },
+  {
+    "id": "long_horizon_003",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_3, compute 3*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_3_4 | 35",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_1",
+          "value": "value_3_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_2",
+          "value": "value_3_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_3",
+          "value": "value_3_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_4",
+          "value": "value_3_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_3_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "3*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_3_4 | 35"
+  },
+  {
+    "id": "long_horizon_004",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_4, compute 4*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_4_4 | 45",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_1",
+          "value": "value_4_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_2",
+          "value": "value_4_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_3",
+          "value": "value_4_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_4",
+          "value": "value_4_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_4_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "4*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_4_4 | 45"
+  },
+  {
+    "id": "long_horizon_005",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_5, compute 5*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_5_4 | 55",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_1",
+          "value": "value_5_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_2",
+          "value": "value_5_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_3",
+          "value": "value_5_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_4",
+          "value": "value_5_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_5_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "5*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_5_4 | 55"
+  },
+  {
+    "id": "long_horizon_006",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_6, compute 6*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_6_4 | 65",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_1",
+          "value": "value_6_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_2",
+          "value": "value_6_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_3",
+          "value": "value_6_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_4",
+          "value": "value_6_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_6_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "6*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_6_4 | 65"
+  },
+  {
+    "id": "long_horizon_007",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_7, compute 7*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_7_4 | 75",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_1",
+          "value": "value_7_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_2",
+          "value": "value_7_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_3",
+          "value": "value_7_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_4",
+          "value": "value_7_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_7_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "7*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_7_4 | 75"
+  },
+  {
+    "id": "long_horizon_008",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_8, compute 8*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_8_4 | 85",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_1",
+          "value": "value_8_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_2",
+          "value": "value_8_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_3",
+          "value": "value_8_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_4",
+          "value": "value_8_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_8_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "8*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_8_4 | 85"
+  },
+  {
+    "id": "long_horizon_009",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_9, compute 9*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_9_4 | 95",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_1",
+          "value": "value_9_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_2",
+          "value": "value_9_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_3",
+          "value": "value_9_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_4",
+          "value": "value_9_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_9_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "9*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_9_4 | 95"
+  },
+  {
+    "id": "long_horizon_010",
+    "suite": "long_horizon",
+    "goal": "Perform a long-horizon memory task: store and read four checkpoints for long_key_10, compute 10*10+5, then report the final checkpoint.",
+    "allowed_tools": [
+      "calculator",
+      "current_date",
+      "kv_store"
+    ],
+    "difficulty": "hard",
+    "category": "memory_long_horizon",
+    "optimal_steps": 10,
+    "grader_type": "contains_all",
+    "expected": "value_10_4 | 105",
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_1",
+          "value": "value_10_1"
+        },
+        "thought": "Store checkpoint 1."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_1"
+        },
+        "thought": "Read checkpoint 1 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_2",
+          "value": "value_10_2"
+        },
+        "thought": "Store checkpoint 2."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_2"
+        },
+        "thought": "Read checkpoint 2 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_3",
+          "value": "value_10_3"
+        },
+        "thought": "Store checkpoint 3."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_3"
+        },
+        "thought": "Read checkpoint 3 back."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_4",
+          "value": "value_10_4"
+        },
+        "thought": "Store checkpoint 4."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "long_key_10_4"
+        },
+        "thought": "Read checkpoint 4 back."
+      },
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "10*10+5"
+        },
+        "thought": "Compute the final checkpoint number."
+      },
+      {
+        "tool": "current_date",
+        "args": {},
+        "thought": "Retrieve the deterministic benchmark date."
+      }
+    ],
+    "mock_final_answer": "value_10_4 | 105"
+  }
+]

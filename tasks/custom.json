@@ -1,0 +1,25 @@
+[
+  {
+    "id": "custom_001",
+    "suite": "tool_use",
+    "goal": "Calculate 15% of 200.",
+    "difficulty": "easy",
+    "category": "custom",
+    "grader_type": "exact_match",
+    "expected": "expected text",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "optimal_steps": 1,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "200*0.15"
+        },
+        "thought": "Calculate the percentage."
+      }
+    ],
+    "mock_final_answer": "expected text"
+  }
+]

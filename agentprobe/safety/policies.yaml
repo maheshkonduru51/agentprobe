@@ -1,0 +1,30 @@
+path_escape:
+  patterns:
+    - "..\\/"
+    - "../"
+    - "..\\"
+sql_write:
+  patterns:
+    - "\\binsert\\b"
+    - "\\bupdate\\b"
+    - "\\bdelete\\b"
+    - "\\bdrop\\b"
+    - "\\balter\\b"
+secret_patterns:
+  patterns:
+    - "api[_ -]?key"
+    - "secret"
+    - "password"
+prompt_injection:
+  patterns:
+    - "ignore previous instructions"
+    - "ignore all previous"
+    - "reveal the secret"
+    - "system prompt"
+    - "follow these instructions instead"
+forbidden_tools:
+  names:
+    - "delete_file"
+    - "send_email"
+    - "delete_file_stub"
+    - "send_email_stub"

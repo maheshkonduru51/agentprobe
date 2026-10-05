@@ -1,0 +1,546 @@
+[
+  {
+    "id": "tool_use_001",
+    "suite": "tool_use",
+    "goal": "Calculate 12+8.",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "difficulty": "easy",
+    "category": "calculator",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 20,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "12+8"
+        },
+        "thought": "Use the calculator for the arithmetic."
+      }
+    ],
+    "mock_final_answer": "20",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "tool_use_002",
+    "suite": "tool_use",
+    "goal": "Calculate 7*6.",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "difficulty": "easy",
+    "category": "calculator",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 42,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "7*6"
+        },
+        "thought": "Use the calculator for the arithmetic."
+      }
+    ],
+    "mock_final_answer": "42",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "tool_use_003",
+    "suite": "tool_use",
+    "goal": "Calculate (50-14)/6.",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "difficulty": "easy",
+    "category": "calculator",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 6,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "(50-14)/6"
+        },
+        "thought": "Use the calculator for the arithmetic."
+      }
+    ],
+    "mock_final_answer": "6",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "tool_use_004",
+    "suite": "tool_use",
+    "goal": "Calculate 2**5.",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "difficulty": "easy",
+    "category": "calculator",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 32,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "2**5"
+        },
+        "thought": "Use the calculator for the arithmetic."
+      }
+    ],
+    "mock_final_answer": "32",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "tool_use_005",
+    "suite": "tool_use",
+    "goal": "Calculate sqrt(144).",
+    "allowed_tools": [
+      "calculator"
+    ],
+    "difficulty": "easy",
+    "category": "calculator",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 12,
+    "mock_plan": [
+      {
+        "tool": "calculator",
+        "args": {
+          "expression": "sqrt(144)"
+        },
+        "thought": "Use the calculator for the arithmetic."
+      }
+    ],
+    "mock_final_answer": "12",
+    "tolerance": 1e-09
+  },
+  {
+    "id": "tool_use_006",
+    "suite": "tool_use",
+    "goal": "Convert 5 km to mi.",
+    "allowed_tools": [
+      "unit_convert"
+    ],
+    "difficulty": "easy",
+    "category": "unit_conversion",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 3.106855,
+    "mock_plan": [
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 5,
+          "from_unit": "km",
+          "to_unit": "mi"
+        },
+        "thought": "Convert the units."
+      }
+    ],
+    "mock_final_answer": "3.106855",
+    "tolerance": 0.001
+  },
+  {
+    "id": "tool_use_007",
+    "suite": "tool_use",
+    "goal": "Convert 10 m to ft.",
+    "allowed_tools": [
+      "unit_convert"
+    ],
+    "difficulty": "easy",
+    "category": "unit_conversion",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 32.8084,
+    "mock_plan": [
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 10,
+          "from_unit": "m",
+          "to_unit": "ft"
+        },
+        "thought": "Convert the units."
+      }
+    ],
+    "mock_final_answer": "32.8084",
+    "tolerance": 0.001
+  },
+  {
+    "id": "tool_use_008",
+    "suite": "tool_use",
+    "goal": "Convert 20 kg to lb.",
+    "allowed_tools": [
+      "unit_convert"
+    ],
+    "difficulty": "easy",
+    "category": "unit_conversion",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 44.092452,
+    "mock_plan": [
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 20,
+          "from_unit": "kg",
+          "to_unit": "lb"
+        },
+        "thought": "Convert the units."
+      }
+    ],
+    "mock_final_answer": "44.092452",
+    "tolerance": 0.001
+  },
+  {
+    "id": "tool_use_009",
+    "suite": "tool_use",
+    "goal": "Convert 32 f to c.",
+    "allowed_tools": [
+      "unit_convert"
+    ],
+    "difficulty": "easy",
+    "category": "unit_conversion",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 0,
+    "mock_plan": [
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 32,
+          "from_unit": "f",
+          "to_unit": "c"
+        },
+        "thought": "Convert the units."
+      }
+    ],
+    "mock_final_answer": "0",
+    "tolerance": 0.001
+  },
+  {
+    "id": "tool_use_010",
+    "suite": "tool_use",
+    "goal": "Convert 3 mi to km.",
+    "allowed_tools": [
+      "unit_convert"
+    ],
+    "difficulty": "easy",
+    "category": "unit_conversion",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 4.828042,
+    "mock_plan": [
+      {
+        "tool": "unit_convert",
+        "args": {
+          "value": 3,
+          "from_unit": "mi",
+          "to_unit": "km"
+        },
+        "thought": "Convert the units."
+      }
+    ],
+    "mock_final_answer": "4.828042",
+    "tolerance": 0.001
+  },
+  {
+    "id": "tool_use_011",
+    "suite": "tool_use",
+    "goal": "Set favorite_color to blue and then retrieve it.",
+    "allowed_tools": [
+      "kv_store"
+    ],
+    "difficulty": "easy",
+    "category": "kv_store",
+    "optimal_steps": 2,
+    "grader_type": "state_check",
+    "expected": {
+      "kind": "kv",
+      "key": "favorite_color",
+      "value": "blue"
+    },
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "favorite_color",
+          "value": "blue"
+        },
+        "thought": "Store the requested key-value pair."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "favorite_color"
+        },
+        "thought": "Read the value back."
+      }
+    ],
+    "mock_final_answer": "blue"
+  },
+  {
+    "id": "tool_use_012",
+    "suite": "tool_use",
+    "goal": "Set project_name to AgentProbe and then retrieve it.",
+    "allowed_tools": [
+      "kv_store"
+    ],
+    "difficulty": "easy",
+    "category": "kv_store",
+    "optimal_steps": 2,
+    "grader_type": "state_check",
+    "expected": {
+      "kind": "kv",
+      "key": "project_name",
+      "value": "AgentProbe"
+    },
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "project_name",
+          "value": "AgentProbe"
+        },
+        "thought": "Store the requested key-value pair."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "project_name"
+        },
+        "thought": "Read the value back."
+      }
+    ],
+    "mock_final_answer": "AgentProbe"
+  },
+  {
+    "id": "tool_use_013",
+    "suite": "tool_use",
+    "goal": "Set city to Hyderabad and then retrieve it.",
+    "allowed_tools": [
+      "kv_store"
+    ],
+    "difficulty": "easy",
+    "category": "kv_store",
+    "optimal_steps": 2,
+    "grader_type": "state_check",
+    "expected": {
+      "kind": "kv",
+      "key": "city",
+      "value": "Hyderabad"
+    },
+    "mock_plan": [
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "city",
+          "value": "Hyderabad"
+        },
+        "thought": "Store the requested key-value pair."
+      },
+      {
+        "tool": "kv_store",
+        "args": {
+          "key": "city"
+        },
+        "thought": "Read the value back."
+      }
+    ],
+    "mock_final_answer": "Hyderabad"
+  },
+  {
+    "id": "tool_use_014",
+    "suite": "tool_use",
+    "goal": "Find and read employee_handbook.txt, then report the key phrase.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "medium",
+    "category": "file_search",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "Engineering owns platform reliability.",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "platform reliability"
+        },
+        "thought": "Search for the requested phrase."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "employee_handbook.txt"
+        },
+        "thought": "Read the matching file."
+      }
+    ],
+    "mock_final_answer": "Engineering owns platform reliability."
+  },
+  {
+    "id": "tool_use_015",
+    "suite": "tool_use",
+    "goal": "Find and read quarterly_notes.txt, then report the key phrase.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "medium",
+    "category": "file_search",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "Q1-2026 planning note",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "Q1-2026"
+        },
+        "thought": "Search for the requested phrase."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "quarterly_notes.txt"
+        },
+        "thought": "Read the matching file."
+      }
+    ],
+    "mock_final_answer": "Q1-2026 planning note"
+  },
+  {
+    "id": "tool_use_016",
+    "suite": "tool_use",
+    "goal": "Find and read policy_notice.txt, then report the key phrase.",
+    "allowed_tools": [
+      "file_search",
+      "read_file"
+    ],
+    "difficulty": "medium",
+    "category": "file_search",
+    "optimal_steps": 2,
+    "grader_type": "contains_all",
+    "expected": "read-only benchmark tools",
+    "mock_plan": [
+      {
+        "tool": "file_search",
+        "args": {
+          "query": "read-only benchmark tools"
+        },
+        "thought": "Search for the requested phrase."
+      },
+      {
+        "tool": "read_file",
+        "args": {
+          "filename": "policy_notice.txt"
+        },
+        "thought": "Read the matching file."
+      }
+    ],
+    "mock_final_answer": "read-only benchmark tools"
+  },
+  {
+    "id": "tool_use_017",
+    "suite": "tool_use",
+    "goal": "What is the highest employee salary?",
+    "allowed_tools": [
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_query",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 90000,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT MAX(salary) AS max_salary FROM employees"
+        },
+        "thought": "Use the read-only SQL tool."
+      }
+    ],
+    "mock_final_answer": "90000",
+    "tolerance": 1e-06
+  },
+  {
+    "id": "tool_use_018",
+    "suite": "tool_use",
+    "goal": "How many employees are there?",
+    "allowed_tools": [
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_query",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 6,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT COUNT(*) AS employee_count FROM employees"
+        },
+        "thought": "Use the read-only SQL tool."
+      }
+    ],
+    "mock_final_answer": "6",
+    "tolerance": 1e-06
+  },
+  {
+    "id": "tool_use_019",
+    "suite": "tool_use",
+    "goal": "What is the Finance department average salary?",
+    "allowed_tools": [
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_query",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 74000,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT AVG(e.salary) AS avg_salary FROM employees e JOIN departments d ON d.id=e.department_id WHERE d.name='Finance'"
+        },
+        "thought": "Use the read-only SQL tool."
+      }
+    ],
+    "mock_final_answer": "74000",
+    "tolerance": 1e-06
+  },
+  {
+    "id": "tool_use_020",
+    "suite": "tool_use",
+    "goal": "How much paid order value belongs to Sales employees?",
+    "allowed_tools": [
+      "sql_query"
+    ],
+    "difficulty": "medium",
+    "category": "sql_query",
+    "optimal_steps": 1,
+    "grader_type": "numeric_tolerance",
+    "expected": 2100,
+    "mock_plan": [
+      {
+        "tool": "sql_query",
+        "args": {
+          "query": "SELECT SUM(o.amount) AS total FROM orders o JOIN employees e ON e.id=o.employee_id JOIN departments d ON d.id=e.department_id WHERE d.name='Sales' AND o.status='paid'"
+        },
+        "thought": "Use the read-only SQL tool."
+      }
+    ],
+    "mock_final_answer": "2100",
+    "tolerance": 1e-06
+  }
+]

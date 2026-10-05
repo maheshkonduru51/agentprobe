@@ -1,0 +1,14 @@
+fastapi==0.128.2
+uvicorn==0.48.0
+pydantic==2.13.4
+sqlalchemy==2.0.50
+openai==1.109.1
+pandas==2.2.3
+numpy==2.3.5
+scipy==1.17.0
+httpx==0.28.1
+python-dotenv==1.2.2
+PyYAML==6.0.3
+pytest==9.0.2
+streamlit==1.50.0
+plotly==6.5.2
